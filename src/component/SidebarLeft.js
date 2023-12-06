@@ -1,13 +1,14 @@
 import React from 'react';
 import {NavLink, useNavigate} from "react-router-dom";
 import logo from '../assets/img/logo.svg';
-import { sidebarMenu } from '../ultil/menu';
+import path from "../component/path"
+import {sidebarMenu} from "../component/menu";
 
 const SidebarLeft = () => {
-    let navigate = useNavigate();
+    const navi = useNavigate()
     return (
         <div className='left'>
-            <div onClick={()=> navigate('/')} className='logo'>
+            <div onClick={()=> navi(path.HOME)} className='logo'>
                 <img src={logo} alt="Logo" className='img_logo'/>
             </div>
             <div className='nav_menu'>

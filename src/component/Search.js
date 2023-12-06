@@ -1,13 +1,11 @@
-import React, {useState} from 'react';
-import * as path from "path";
 import {useNavigate} from "react-router-dom";
-import {useDispatch} from "react-redux";
-import icons from "../ultil/icon";
+import icons from "./icon";
+import {useState} from "react";
 
 const Search = () => {
     const navigate = useNavigate()
-
     const {AiOutlineSearch} = icons
+    const [keyword, setKeyword] = useState('')
 
 
 
@@ -22,10 +20,10 @@ const Search = () => {
                 placeholder='Tìm kiếm bài hát, nghệ sĩ, lời bài hát...'
                 value={keyword}
                 onChange={e => setKeyword(e.target.value)}
-                onKeyUp={handleSearch}
+                // onKeyUp={} :nơi chuyền Hàm nhận API
             />
         </div>
-    );
-};
+    )
+}
 
-export default Search;
+export default Search

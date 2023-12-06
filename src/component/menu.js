@@ -1,4 +1,4 @@
-import icons from "./icon"
+import icons from "../component/icon"
 const {BsFillDiscFill,
        AiOutlineLineChart,
        MdLibraryMusic,
